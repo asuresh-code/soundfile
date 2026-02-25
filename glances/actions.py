@@ -34,10 +34,7 @@ class GlancesActions:
 
         # Add a timer to avoid any trigger when Glances is started (issue#732)
         # Action can be triggered after refresh * 2 seconds
-        if hasattr(args, 'time'):
-            self.start_timer = Timer(args.time * 2)
-        else:
-            self.start_timer = Timer(3)
+
 
     def get(self, stat_name):
         """Get the stat_name criticality."""
