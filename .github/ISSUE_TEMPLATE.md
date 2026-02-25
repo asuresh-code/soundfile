@@ -1,4 +1,4 @@
-Before filling this issue, please read the manual (https://glances.readthedocs.io/en/latest/) and search if the bug do not already exists in the database (https://github.com/nicolargo/glances/issues).
+Before filing this issue, please read the manual (https://glances.readthedocs.io/en/latest/) and search if the bug do not already exists in the database (https://github.com/nicolargo/glances/issues).
 
 For any questions concerning installation or use, please open a discussion (https://github.com/nicolargo/glances/discussions), not an issue.
 
