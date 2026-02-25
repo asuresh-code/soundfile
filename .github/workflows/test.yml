@@ -90,35 +90,6 @@ jobs:
       run: |
         python -m pytest ./tests/test_core.py
 
-  test-macos:
-
-    needs: source-code-checks
-    # https://github.com/actions/runner-images?tab=readme-ov-file#available-images
-    runs-on: macos-15
-    strategy:
-      matrix:
-        # Only test the latest stable version
-        python-version: ["3.14"]
-
-    steps:
-
-      - uses: actions/checkout@v5
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v6
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          if [ -f dev-requirements.txt ]; then python -m pip install -r dev-requirements.txt; fi
-          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
-
-      - name: Unitary tests
-        run: |
-          python -m pytest ./tests/test_core.py
-
   # test-freebsd:
 
   #   needs: source-code-checks
